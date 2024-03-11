@@ -127,7 +127,7 @@ const TeacherList = () => {
             <option value="30-40">30-40</option>
             <option value="40-50">40-50</option>
             <option value="50-60">50-60</option>
-            <option value="60+">Greater than 60</option>
+            <option value="60-110">Greater than 60</option>
           </select>
         </label>
 
@@ -135,16 +135,13 @@ const TeacherList = () => {
           Filter by Number of Classes:
           <select onChange={handleClassFilter}>
             <option value="">All</option>
-            <option value="0-10">Less than 10</option>
-            <option value="10-20">10-20</option>
-            <option value="20-30">20-30</option>
-            <option value="30-40">30-40</option>
-            <option value="40-50">40-50</option>
-            <option value="50-60">50-60</option>
-            <option value="60-70">60-70</option>
-            <option value="70-80">70-80</option>
-            <option value="80-90">80-90</option>
-            <option value="90+">Greater than 90</option>
+            <option value="25-50">Less than 50</option>
+            <option value="50-70">50-70</option>
+            <option value="70-90">70-90</option>
+            <option value="90-120">90-120</option>
+            <option value="120-150">120-150</option>
+            <option value="150-180">150-180</option>
+            <option value="180-200">Greater than 180</option>
           </select>
         </label>
 
@@ -156,7 +153,7 @@ const TeacherList = () => {
           <tr>
             <th>Full Name</th>
             <th>Age</th>
-            <th>Number of Classes</th>
+            <th>Number of Classes(per semester)</th>
             <th>Modify</th>
             <th>Delete</th>
           </tr>

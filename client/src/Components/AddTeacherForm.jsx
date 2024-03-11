@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./AddTeacherForm.css"
 
@@ -18,12 +18,41 @@ const AddTeacherForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const calculateAgeFromDOB = () => {
+    const dob = new Date(formData.dateOfBirth);
+    const today = new Date();
+    const age = today.getFullYear() - dob.getFullYear();
+
+    if (
+      today.getMonth() < dob.getMonth() ||
+      (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())
+    ) {
+      return age - 1;
+    }
+
+    return age;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      await axios.post("https://persidio-backend.onrender.com/teachers", formData);
-      navigate("/");
+      const calculatedAge = calculateAgeFromDOB();
+
+      console.log('Calculated Age:', calculatedAge);
+      console.log('Entered Age:', formData.age);
+
+      if (formData.age !== String(calculatedAge)) {
+        alert('Age and Date of Birth inconsistency detected, Please Fill correctly !');
+      } else if(formData.numberOfClasses > 70){
+        alert("No of classes for a Teacher can't exceeds 70")
+      } else if(formData.age < 18){
+        alert("Age of a teacher can't be less than 18")
+      } else {
+        await axios.post("https://persidio-backend.onrender.com/teachers", formData);
+        navigate("/");
+      }
+
     } catch (error) {
       console.error("Error adding teacher:", error);
     }
