@@ -1,0 +1,55 @@
+/* Add your global styles if needed */
+
+/* Styling for the Add Teacher form */
+.add-teacher-container {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center horizontally */
+    max-width: 600px; /* Optional: Set a max-width for better readability */
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translateY(-50%); /* Center vertically */
+  }
+  
+  
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #2ecc71; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #27ae60; /* Darker green on hover */
+  }
+  

@@ -1,0 +1,96 @@
+
+.teacher-list-container {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 7%;
+    left: 20%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  thead {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #ecf0f1;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2ecc71;
+  }
+  
+  .delete {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #fd5f4d;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    background-color: #fd5946;
+  }
+  .modify {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #4355fc;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modify:hover {
+    background-color: #3568f3;
+  }
+  
+  .add-teacher-link {
+    display: block;
+    width: 8%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    background-color: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+  }
