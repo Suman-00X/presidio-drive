@@ -56,15 +56,14 @@ const UpdateTeacherForm = () => {
       console.log('Calculated Age:', calculatedAge);
       console.log('Entered Age:', formData.age);
 
-      if (formData.age != calculatedAge) {
-        alert('Age and Date of Birth inconsistency detected, Please Fill correctly !');
-      }else if(formData.numberOfClasses < 25){
+      if(formData.numberOfClasses < 25){
         alert("No of classes for a Teacher can't be less than 25")
       } else if(formData.numberOfClasses > 200){
         alert("No of classes for a Teacher can't exceeds 200")
-      } else if(formData.age < 18){
+      } else if(calculatedAge < 18){
         alert("Age of a teacher can't be less than 18")
       } else {
+        formData.age = calculatedAge
       await axios.put(`https://persidio-backend.onrender.com/teachers/${params.id}`, formData);
       navigate("/");
       }
@@ -81,10 +80,10 @@ const UpdateTeacherForm = () => {
           Full Name:
           <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} />
         </label>
-        <label>
+        {/* <label>
           Age:
           <input type="text" name="age" value={formData.age} onChange={handleChange} />
-        </label>
+        </label> */}
         <label className='dob'>
           DOB:
           <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} />

@@ -149,9 +149,8 @@ const TeacherList = () => {
 
       <table>
 
-        <thead>
-          <tr>
-            <th>Full Name</th>
+        <thead>          <tr>
+            <th>Teacher's Name</th>
             <th>Age</th>
             <th>Number of Classes(per semester)</th>
             <th>Modify</th>

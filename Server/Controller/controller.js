@@ -2,7 +2,6 @@ import Teacher from '../Database/models.js';
 
 // Get all 
 export const getAllTeachers = async (req, res) => {
-  console.log("getAllTeachers Called")
   try {
     const teachers = await Teacher.find();
     res.json(teachers);
