@@ -36,7 +36,7 @@ Before you begin, make sure you have the following installed on your computer:
    ```bash
    npm install
    ```
-4. Navigate to the frontend folder: 
+4. Navigate to the backend folder: 
     ```bash
    cd ..
    ```
